@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "bccae311-af0a-4227-a0c7-7998451bb74d",
+		"name": "SpringBoot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "keepalive",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8443/keepalive",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"keepalive"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
