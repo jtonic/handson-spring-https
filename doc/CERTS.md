@@ -6,7 +6,7 @@
 1. identity.p12
     > keytool -genkeypair -alias server -keyalg RSA -keysize 2048 -validity 365 -keystore identity.p12 -storetype PKCS12
     > 
-    > __keystore pwd:__ server_key_pwd
+    > __keystore pwd:__ server_key_pwd -> identity
 
 2. export the certificate
 
@@ -15,7 +15,7 @@
 3. http-trust.p12 
     > keytool -importcert -alias server -file server-certificate.crt -keystore http-trust.p12 -storetype PKCS12
     > 
-    > __keystore pwd:__ server_trust_pwd
+    > __keystore pwd:__ server_trust_pwd -> http-trust
 
 
 ## Client side
@@ -33,6 +33,15 @@
 
 ## Show certs
 
-> keytool -list -v -keystore client-keystore.p12 -storetype PKCS12
+> keytool -list -v -keystore src/main/resources/identity.p12 -storetype PKCS12
 
 > keytool -list -v -keystore http-trust.p12 -storetype PKCS12
+
+## Miscellaneous
+
+
+- Change p12 certificate's passwords
+
+> keytool -storepasswd -keystore src/main/resources/identity.p12
+
+> keytool -storepasswd -keystore src/main/resources/http-trust.p12

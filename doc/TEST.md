@@ -4,9 +4,9 @@
 
 > curl -k --cert-type P12 --cert src/main/resources/client-keystore.p12:client_key_pwd https://localhost:8443/keepalive
  
-> curl -k --cert-type P12 --cert src/main/resources/identity.p12:server_key_pwd https://localhost:8443/keepalive
+> curl -k --cert-type P12 --cert src/main/resources/identity.p12:identity https://localhost:8443/keepalive
 
-> (this should not work) curl -k --cert-type P12 --cert src/main/resources/http-trust.p12:server_trust_pwd https://localhost:8443/keepalive
+> (this should not work) curl -k --cert-type P12 --cert src/main/resources/http-trust.p12:http-trust https://localhost:8443/keepalive
 
 ## Postman
 
